@@ -52,7 +52,7 @@ let ciudades = [{
     continent: "Asia",
     photo: "/public/img/bangkok.jpg",
     population:  14626225,
-    userId:  user1
+    userId:  "user1"
 },
 
 {
@@ -61,7 +61,7 @@ let ciudades = [{
     continent: "Europa",
     photo: "/public/img/paris.jpg",
     population:  2161000,
-    userId:  user1
+    userId:  "user1"
 },
 
 {
@@ -70,7 +70,7 @@ let ciudades = [{
     continent: "Europa",
     photo: "/public/img/londres.jpg",
     population:  8982000,
-    userId:  user1
+    userId:  "user1"
 },
 
 {
@@ -79,7 +79,7 @@ let ciudades = [{
     continent: "Asia",
     photo: "/public/img/dubai.jpg",
     population:  3331000,
-    userId:  user1 
+    userId:  "user1" 
 },
 
 {
@@ -88,7 +88,7 @@ let ciudades = [{
     continent: "Asia",
     photo: "/public/img/singapur.jpg",
     population:  5677000,
-    userId:  user1 
+    userId:  "user1" 
 },
 
 {
@@ -97,7 +97,7 @@ let ciudades = [{
     continent: "Asia",
     photo: "/public/img/kuala.jpg",
     population:  1808000,
-    userId:  user1
+    userId:  "user1"
 },
 
 {
@@ -106,7 +106,7 @@ let ciudades = [{
     continent: "América",
     photo: "/public/img/nuevayork.jpg",
     population:  8468000,
-    userId:  user1
+    userId:  "user1"
 },
 
 {
@@ -115,7 +115,7 @@ let ciudades = [{
     continent: "Asia",
     photo: "/public/img/tokio.jpg",
     population:  13960000,
-    userId:  user1
+    userId:  "user1"
 },
 
 {
@@ -124,7 +124,7 @@ let ciudades = [{
     continent: "Asia",
     photo: "/public/img/antalya.jpg",
     population:  2619832,
-    userId:  user1
+    userId:  "user1"
 },
 
 {
@@ -133,7 +133,7 @@ let ciudades = [{
     continent: "Asia",
     photo: "/public/img/seul.jpg",
     population:  9776000,
-    userId:  user1
+    userId:  "user1"
 },
 
 {
@@ -142,7 +142,7 @@ let ciudades = [{
     continent: "Asia",
     photo: "/public/img/osaka.jpg",
     population:  2691000,
-    userId:  user1
+    userId:  "user1"
 },
 
 {
@@ -151,7 +151,7 @@ let ciudades = [{
     continent: "Asia",
     photo: "/public/img/meca.jpg",
     population:  1579000,
-    userId:  user1
+    userId:  "user1"
 }]
 
 /* let atracciones = [{ X6
