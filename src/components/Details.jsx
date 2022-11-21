@@ -8,10 +8,16 @@ export default function Details() {
   let [cityDetail, setCityDetail] = useState([]);
 
   useEffect(() => {
+
+    /// Axios hace la petición al back, con el metodo get. Pide como parametro. 
+    /// el .then va a realizar la acción cuando reciba la información del back. 
     axios
       .get(`http://localhost:8000/api/cities/${id}`)
+
+        //// setCityDetail va a guardar la respuesta del servidor en la variable "cityDetail"
+
       .then((res) => setCityDetail([res.data.response]));
-  }, [id]);
+  }, [id]);  /// cuando cambie el valor de "ID" se ejecuta el useEffect
 
   return (
     <div className="card-container">
