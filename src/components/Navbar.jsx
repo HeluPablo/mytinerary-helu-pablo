@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import {Link as LinkRoute} from "react-router-dom"
 
 const Navbar = () => {
 
@@ -41,7 +42,7 @@ const Navbar = () => {
                     <div className={burguer_class1} ></div>
                     <div className={burguer_class1} ></div>
                 </div>
-                <h2 className="titnav">Turist Life</h2>
+                <LinkRoute className="titnav" to="/" > <h2 className="titnav">Turist Life</h2> </LinkRoute>
                 <div className="burguer-menu2" onClick={updateMenu2}>
                     <div className={burguer_class2} ></div>
                     <div className={burguer_class2} ></div>
@@ -50,13 +51,13 @@ const Navbar = () => {
             </nav>
 
             <div className={menu_class1}>
-                <a href="/" className="navhome">Home</a>
-                <a href="/Cities" className="navcities">Cities</a>
-                <a href="/Hotels" className="navhotels">Hotels</a>
+                <LinkRoute to="/" className="navhome">Home</LinkRoute>
+                <LinkRoute to="/Cities" className="navcities">Cities</LinkRoute>
+                <LinkRoute to="/Hotels" className="navhotels">Hotels</LinkRoute>
             </div>
             <div className={menu_class2}>
-            <a href="/Cities" className="navhome">Login</a>
-                <a href="/Hotels" className="navcities">Register</a>
+            <a href="/signin" className="navhome">Login</a>
+                <a href="/signup" className="navcities">Register</a>
             </div>
         </>
     )

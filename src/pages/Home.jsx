@@ -4,7 +4,7 @@ import Home2 from '../components/Home2.jsx'
 
 export default function Home() {
   return (
-    <div>
+    <div className='body'>
         <Home1/>
         <Home2/>
     </div>

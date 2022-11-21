@@ -4,7 +4,7 @@ import Carousel from './Carousel'
 export default function Home2() {
   return (
     <div>
-      {/*   <Carousel/> */}
+        {/* <Carousel/> */}
     </div>
   )
 }
