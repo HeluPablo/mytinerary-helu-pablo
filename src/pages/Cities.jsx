@@ -12,8 +12,12 @@ export default function Cities() {
   
   useEffect(() => {
     axios.get(`http://localhost:8000/api/cities`)
-    .then((res) => setCheckBox(res.data.response))
-    .then((res) => setCiudades(res.data.response));
+    .then((res) => {
+      setCheckBox(res.data.response)
+      setCiudades(res.data.response)
+    })
+    
+    ;
     
     /* axios.get(`http://localhost:8000/api/cities`)
     .then((res) => ); */
