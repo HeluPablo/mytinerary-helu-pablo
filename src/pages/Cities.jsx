@@ -17,15 +17,15 @@ export default function Cities() {
       });
 
     axios
-      .get(`http://localhost:8000/api/cities`, {
+      .get(`http://localhost:8000/api/cities`, {  /// Petición para filtrar y traer las ciudades
         params: {
           continent: check,
           name: search,
         },
-      }) /// Petición para filtrar y traer las ciudades
+      })
       .then((res) => setCiudades(res.data.response));
   }, [check, search]);
-
+  
   const checkBoxArray = Array.from(new Set(checkbox?.map((e) => e.continent)));
 
   // console.log(checkBoxArray)
