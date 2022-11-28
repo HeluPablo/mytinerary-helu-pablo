@@ -9,6 +9,7 @@ import SignUp from './pages/SignUp';
 import NotFound from './pages/NotFound';
 import City from './pages/City';
 import NewCity from './pages/NewCity';
+import MyCities from './pages/MyCities';
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         <Route path='/notfound' element={<NotFound/>}></Route>
         <Route path='/city/:id' element={<City/>}></Route>
         <Route path='/newcity' element={<NewCity/>}></Route>
+        <Route path='/mycities' element={<MyCities/>}></Route>
         <Route path='/*' element={<NotFound/>}></Route>
       </Routes>
     </Layout>
