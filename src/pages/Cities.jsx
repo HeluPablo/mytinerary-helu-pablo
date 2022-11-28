@@ -2,8 +2,15 @@ import React from "react";
 import CardCity from "../components/CardCity";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import Alerts from "../components/Alerts";
+import { ToastContainer, toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
+
 
 export default function Cities() {
+  // toast("Probando =) ")
+
+
   const [search, setSearch] = useState("");  ///Cambia el valor al estado 
   let [ciudades, setCiudades] = useState();
   let [checkbox, setCheckBox] = useState();
@@ -49,6 +56,7 @@ export default function Cities() {
 
   return (
     <div className="body">
+      <ToastContainer />;
       <div className="input-cont">
         <input
           className="inputsearch form-control"
@@ -76,7 +84,7 @@ export default function Cities() {
           <div key={city.name}>
             <CardCity key={city.id} {...city} />
           </div>
-        ))}
+        ))}      
       </div>
     </div>
   );
