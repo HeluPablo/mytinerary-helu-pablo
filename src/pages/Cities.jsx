@@ -12,10 +12,10 @@ export default function Cities() {
   let [checkbox, setCheckBox] = useState();
   let [check, setCheck] = useState([]);
 
-  let {data : redux} = useGetAllQuery({search , check})
+  let { data: redux } = useGetAllQuery({ search, check });
 
-console.log(redux?.response)
-let cities = redux?.response
+  console.log(redux?.response);
+  let cities = redux?.response;
 
   useEffect(() => {
     axios
