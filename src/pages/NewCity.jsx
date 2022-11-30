@@ -3,16 +3,20 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { confirmAlert } from "react-confirm-alert";
 import "react-confirm-alert/src/react-confirm-alert.css";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 export default function NewCity() {
+  let navigate = useNavigate()
   const handleSubmit = (event) => {
     event.preventDefault();
 
     const userData = {
       name: event.target[0].value,
-      surname: event.target[1].value,
-      email: event.target[2].value,
-      password: event.target[3].value,
+      continent: event.target[1].value,
+      photo: event.target[2].value,
+      population: event.target[3].value,
+      userId: "6375e7b7a417c13e23b73296"
     };
     console.log(userData);
 
@@ -22,7 +26,13 @@ export default function NewCity() {
       buttons: [
         {
           label: "Yes",
-          onClick: () => toast("city created succesfully"),
+          onClick: () => {
+            axios
+              .post(`http://localhost:8000/api/cities` , userData) /// Petición crear ciudad
+              .then((res) => {
+                console.log(res); toast(res.data.message) ; navigate(`/city/${res.data.response._id}`)
+              }).catch((err)=> toast(err.response.data.message));
+          },
         },
         {
           label: "No",
@@ -38,14 +48,7 @@ export default function NewCity() {
       <section className="form-cont">
         <h2 className="form-title">Register a new city</h2>
         <form onSubmit={handleSubmit}>
-          <div className="">
-            <input
-              name="id"
-              className="input"
-              placeholder="ID"
-              type="text"
-              required
-            />
+          <div className="">            
           </div>
           <div className="">
             <input
@@ -65,6 +68,14 @@ export default function NewCity() {
             />
           </div>
           <div className="">
+          <input
+              name="photo"
+              className="input"
+              placeholder="Photo"
+              type="text"
+            />
+          </div>
+          <div className="">
             <input
               name="population"
               className="input"
@@ -72,14 +83,7 @@ export default function NewCity() {
               type="text"
             />
           </div>
-          <div className="">
-            <input
-              name="userid"
-              className="input"
-              placeholder="UserID"
-              type="text"
-              required
-            />
+          <div className="">           
           </div>
           <div className="">
             <button type="submit" className="">
