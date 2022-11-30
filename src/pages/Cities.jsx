@@ -8,7 +8,6 @@ import { useGetAllQuery } from "../Redux/reducers/citiesAPI";
 
 export default function Cities() {
   const [search, setSearch] = useState(""); ///Cambia el valor al estado
-  // let [cities, setCities] = useState();
   let [checkbox, setCheckBox] = useState();
   let [check, setCheck] = useState([]);
 
