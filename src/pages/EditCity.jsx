@@ -48,7 +48,7 @@ export default function EditCity() {
               .then((res) => {
                 console.log(res);
                 toast(res.data.message);
-                navigate(`/mycities`);
+                setTimeout (() => navigate(`/mycities`) , 2000 )                
               })
               .catch((err) => toast(err.response.data.message));
           },
