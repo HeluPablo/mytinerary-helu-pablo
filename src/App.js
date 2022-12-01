@@ -10,6 +10,7 @@ import NotFound from './pages/NotFound';
 import City from './pages/City';
 import NewCity from './pages/NewCity';
 import MyCities from './pages/MyCities';
+import EditCity from './pages/EditCity';
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
         <Route path='/city/:id' element={<City/>}></Route>
         <Route path='/newcity' element={<NewCity/>}></Route>
         <Route path='/mycities' element={<MyCities/>}></Route>
+        <Route path='/edit/:id' element={<EditCity/>}></Route>
         <Route path='/*' element={<NotFound/>}></Route>
       </Routes>
     </Layout>
