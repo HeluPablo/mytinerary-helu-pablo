@@ -11,6 +11,8 @@ import City from './pages/City';
 import NewCity from './pages/NewCity';
 import MyCities from './pages/MyCities';
 import EditCity from './pages/EditCity';
+import MyTineraries from './pages/MyTineraries';
+import EditItinerary from './pages/EditItinerary';
 
 
 function App() {
@@ -25,7 +27,9 @@ function App() {
         <Route path='/city/:id' element={<City/>}></Route>
         <Route path='/newcity' element={<NewCity/>}></Route>
         <Route path='/mycities' element={<MyCities/>}></Route>
+        <Route path='/mytineraries' element={<MyTineraries/>}></Route>
         <Route path='/edit/:id' element={<EditCity/>}></Route>
+        <Route path='/editinerary/:id' element={<EditItinerary/>}></Route>
         <Route path='/*' element={<NotFound/>}></Route>
       </Routes>
     </Layout>
