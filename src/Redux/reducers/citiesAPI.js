@@ -11,8 +11,14 @@ const citiesAPI = createApi({
     getAll: builder.query({
       query: ({search , check}) => `cities?continent=${check}&name=${search}`,
     }),
+    delCity: builder.mutation({
+      query: ( id ) => ({
+        url: `/cities/${id}`,
+        method: "DELETE",
+      }),
+    }),
   }),
 });
 
 export default citiesAPI;
-export const { useGetAllQuery } = citiesAPI;
+export const { useGetAllQuery , useDelCityMutation } = citiesAPI;

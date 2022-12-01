@@ -8,7 +8,6 @@ import { useGetAllQuery } from "../Redux/reducers/citiesAPI";
 
 export default function Cities() {
   const [search, setSearch] = useState(""); ///Cambia el valor al estado
-  // let [cities, setCities] = useState();
   let [checkbox, setCheckBox] = useState();
   let [check, setCheck] = useState([]);
 
@@ -23,17 +22,7 @@ export default function Cities() {
       .then((res) => {
         setCheckBox(res.data.response);
       });
-
-    // axios
-    //   .get(`http://localhost:8000/api/cities`, {  /// Petición para filtrar y traer las ciudades
-    //     params: {
-    //       continent: check,
-    //       name: search,
-    //     },
-    //   })
-    //   .then((res) => setCiudades(res.data.response));
-
-    // getAllRedux().then((res) => console.log(res));
+   
   }, [check, search]);
 
   const checkBoxArray = Array.from(new Set(checkbox?.map((e) => e.continent)));
