@@ -24,12 +24,12 @@ export default function Details() {
       {console.log(cityDetail)}
       {cityDetail?.map((e) => (
         <>
-          <div class="card">
-            <div class="card-details">
+          <div className="card">
+            <div className="card-details">
             <img className="img-card-details" src={e.photo} alt={e.name}/>
-              <p class="text-title">{e.name}</p>
-              <p class="text-body">Continent: {e.continent}</p>
-              <p class="text-body">Population: {e.population}</p>
+              <p className="text-title">{e.name}</p>
+              <p className="text-body">Continent: {e.continent}</p>
+              <p className="text-body">Population: {e.population}</p>
               
             </div>
             <button className="Submit-button" onClick={() => navigate(-1)}>
