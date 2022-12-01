@@ -77,10 +77,12 @@ export default function Itinerary(props) {
               <p>{e.description}</p>
               <p>{e.duration} hrs</p>
               <p>${e.price} </p>
+              <div>
               <button onClick={(i) => {i.preventDefault(); Navigate(`/editinerary/${e._id}`) }}> Edit </button>
               <button value={e._id} onClick={(i) => deleteItinerary(i)}>
               Delete
             </button>
+            </div>
             </div>
           </div>
         </div>
